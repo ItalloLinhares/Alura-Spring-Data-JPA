@@ -24,12 +24,13 @@ public class SpringDataApplication implements CommandLineRunner {
 	@Override
 	public void run(String... args) throws Exception {
 		Scanner scanner = new Scanner(System.in);
+
 		while(system){
 			System.out.println("Qual aca executar?");
 			System.out.println("0 - Sair");
 			System.out.println("Qual aca executar?");
-
 		}
+
 		Cargo cargo = new Cargo();
 		cargo.setDescricao("Dev");
 		repository.save(cargo);

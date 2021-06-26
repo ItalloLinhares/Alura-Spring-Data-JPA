@@ -2,10 +2,12 @@ package service;
 
 import br.com.alura.spring.data.orm.Cargo;
 import br.com.alura.spring.data.repository.CargoRepository;
+import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Repository;
 import org.springframework.stereotype.Service;
 
 import java.util.Scanner;
+
 
 @Service
 public class CrudCargoService {
@@ -14,9 +16,9 @@ public class CrudCargoService {
     public CrudCargoService(CargoRepository cargoRepository){
         this.cargoRepository = cargoRepository;
     }
-    public void inicial(Scanner scanner){
-        salvar(scanner);
-    }
+
+    public void inicial(Scanner scanner){salvar(scanner);}
+
     private void salvar(Scanner scanner){
         System.out.println("Descricao do cargo");
         String descricao = scanner.next();
